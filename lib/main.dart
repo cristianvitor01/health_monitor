@@ -4,6 +4,8 @@ import 'utils/app_colors.dart';
 import './widgets/dashboard_head.dart';
 import './widgets/navigation_buttons.dart';
 import './widgets/appointment_card.dart';
+// import './widgets/search_with_notifications_button.dart';  // Importando o widget de busca com notificações
+
 
 void main() {
   runApp(const MainApp());
@@ -31,8 +33,9 @@ class DashboardPage extends StatelessWidget {
       body: ListView( // ListView usado para conseguirmos rolar o conteudo
         children: const [
           DashboardHeader(),
+          SearchWithNotifications(),  // Barra de busca com notificações
           UpcomingAppointmentCard(),
-          NavigationButtons(),
+          // NavigationButtons(),
         ],
       ),
     );
