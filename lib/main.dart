@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'utils/app_colors.dart';
+import './widgets/dashboard_head.dart';
 
 void main() {
   runApp(const MainApp());
@@ -24,14 +25,11 @@ class DashboardPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       backgroundColor: AppColors.backgroundColor,
-      body: Center(
-        child: Text(
-          'Dashboard!',
-          style: TextStyle(
-            fontSize: 24,
-            fontWeight: FontWeight.bold,
-            color: AppColors.textMain),
-        ),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          DashboardHeader(),
+        ],
       ),
     );
   }
