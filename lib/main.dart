@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'utils/app_colors.dart';
 import './widgets/dashboard_head.dart';
+import './widgets/navigation_buttons.dart';
+import './widgets/appointment_card.dart';
 
 void main() {
   runApp(const MainApp());
@@ -23,12 +26,13 @@ class DashboardPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       backgroundColor: AppColors.backgroundColor,
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
+      body: ListView( // ListView usado para conseguirmos rolar o conteudo
+        children: const [
           DashboardHeader(),
+          UpcomingAppointmentCard(),
+          NavigationButtons(),
         ],
       ),
     );
