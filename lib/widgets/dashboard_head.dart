@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../utils/app_colors.dart'; // Importa as cores
+import '../utils/app_colors.dart'; 
 
 class DashboardHeader extends StatelessWidget {
   const DashboardHeader({super.key});
@@ -12,20 +12,19 @@ class DashboardHeader extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            // Título
             Text(
               'Dashboard',
               style: TextStyle(
                 fontFamily: 'Poppins',
                 fontSize: 36.0,
                 fontWeight: FontWeight.bold,
-                color: AppColors.textMain, // Azul escuro
+                color: AppColors.textMain, 
               ),
             ),
-            // Avatar do usuário
+            // Avatar user
              CircleAvatar(
               radius: 24.0,
-              backgroundImage: AssetImage('assets/user_avatar.png'), // Substitua com sua imagem
+              backgroundImage: AssetImage('assets/images/user_avatar.png'), 
             ),
           ],
         ),
