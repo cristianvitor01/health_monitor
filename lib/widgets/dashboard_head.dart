@@ -18,7 +18,7 @@ class DashboardHeader extends StatelessWidget {
                 fontFamily: 'Poppins',
                 fontSize: 36.0,
                 fontWeight: FontWeight.bold,
-                color: AppColors.textMain, 
+                color: UIColor.textMain, 
               ),
             ),
             // Avatar user

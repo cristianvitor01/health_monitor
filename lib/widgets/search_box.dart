@@ -1,28 +1,33 @@
 import 'package:flutter/material.dart';
+import '../utils/app_colors.dart';
 
 class SearchBox extends StatelessWidget {
-  const SearchBox({super.key});
+  final String hintText; // Texto de dica
+  final Icon icon;
+
+  const SearchBox({
+    super.key,
+    this.hintText = 'Pesquisar...',
+    this.icon = const Icon(Icons.search)
+  });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 15),
+      margin: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+      padding: const EdgeInsets.symmetric(horizontal: 8.0),
       decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(30),
-        boxShadow: const [
-          BoxShadow(
-            color: Colors.black26,
-            blurRadius: 6,
-            offset: Offset(0, 2),
-          ),
-        ],
+        color: const Color.fromARGB(255, 255, 255, 255),
+        borderRadius: BorderRadius.circular(14.0)
       ),
-      child: const TextField(
+      child: TextField(
+        style: const TextStyle(
+          fontSize: 14, 
+          fontFamily: 'Poppins'),
         decoration: InputDecoration(
-          hintText: 'Busque seus registros',
-          hintStyle: TextStyle(color: Colors.grey),
+          hintText: hintText,
           border: InputBorder.none,
+          suffixIcon: icon,
         ),
       ),
     );
