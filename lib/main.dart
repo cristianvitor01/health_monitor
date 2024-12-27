@@ -26,77 +26,68 @@ class DashboardPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: UIColor.backgroundColor,
-      body: ListView(
-        padding: const EdgeInsets.all(16.0), // Padding global
-        children: [
-          const DashboardHeader(),
-          const SizedBox(height: 16.0), // Espaço após o cabeçalho
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              const Expanded(
-                child: SearchBox(
-                  hintText: 'Busque seus registros',
-                ),
-              ),
-              const SizedBox(width: 8.0),
-              Stack(
-                children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      color: UIColor.iconsColor,
-                      borderRadius: BorderRadius.circular(14.0),
-                    ),
-                    child: IconButton(
-                      onPressed: () {
-                        debugPrint('Botão de notificações pressionado');
-                      },
-                      icon: const Icon(
-                        Icons.notifications,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
-                  Positioned(
-                    right: 4,
-                    top: 4,
-                    child: Container(
-                      padding: const EdgeInsets.all(4.0),
-                      decoration: const BoxDecoration(
-                        color: Colors.red,
-                        shape: BoxShape.circle,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ],
-          ),
-          const SizedBox(height: 16.0),
-          const Text(
-            'Sua próxima consulta',
-            style: TextStyle(
-              fontFamily: 'Poppins',
-              fontSize: 24.0,
-              color: UIColor.textMain,
+  backgroundColor: UIColor.backgroundColor,
+  body: Padding(
+    padding: const EdgeInsets.all(16.0),
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start, // Alinha elementos horizontalmente
+      children: [
+        const DashboardHeader(), // Cabeçalho no topo
+        const SizedBox(height: 16.0), // Espaço entre widgets
+        Row(
+          children: [
+            const Expanded(
+              child: SearchBox(hintText: 'Search your records'),
             ),
-          ),
-          const SizedBox(height: 8.0),
-          const AppointmentCard(
-            doctorName: 'Dr. Schmitz',
-            doctorSpecialty: 'Neurologista',
-            email: 'joao@exemplo.com',
-            phone: '(99) 99999-9999',
-            date: '25/12/2024',
-            time: '14:00',
-            address: 'Rua Exemplo, 123',
-          ),
-          const SizedBox(height: 16.0),
-          // Adicione outros widgets, como lista de consultas futuras ou estatísticas
-        ],
-      ),
-    );
+            const SizedBox(width: 8.0),
+            Stack(
+              children: [
+                Container(
+                  decoration: BoxDecoration(
+                    color: UIColor.iconsColor,
+                    borderRadius: BorderRadius.circular(14.0)
+                  ),
+                  child: IconButton(
+                    onPressed: () {},
+                    icon: const Icon(Icons.notifications, color: Colors.white),
+                  ),
+                ),
+                Positioned(
+                  right: 4,
+                  top: 4,
+                  child: Container(
+                    width: 8.0,
+                    height: 8.0,
+                    decoration: const BoxDecoration(
+                      color: Colors.red,
+                      shape: BoxShape.circle,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+        const SizedBox(height: 24.0),
+        const Text(
+          '  Your next Appointment',
+          style: TextStyle(fontFamily: 'Poppins', fontSize: 24.0, color: UIColor.textMain),
+        ),
+        const SizedBox(height: 16.0),
+        const AppointmentCard(
+          doctorName: 'Dr. Schmitz',
+          doctorSpecialty: 'Neurologist',
+          email: 'schmitz@aol.de',
+          phone: '+49 989 232',
+          date: '25/12/2024',
+          time: '16:30',
+          address: 'Winklergasse 45, 10117 Berlin',
+        ),
+      ],
+    ),
+  ),
+);
+
   }
 }
 

@@ -30,7 +30,7 @@ class AppointmentCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(32),
       ),
       child: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(32.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -38,8 +38,8 @@ class AppointmentCard extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(doctorName, style: Theme.of(context).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
-                Text(doctorSpecialty, style: Theme.of(context).textTheme.bodySmall),
+                Text(doctorName, style: Theme.of(context).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold, color: UIColor.textMain)),
+                Text(doctorSpecialty, style: Theme.of(context).textTheme.bodySmall?.copyWith(color: UIColor.textMain)),
               ],
             ),
             const SizedBox(height: 8.0),
@@ -47,13 +47,13 @@ class AppointmentCard extends StatelessWidget {
             // Ícones de Contato
             Row(
               children: [
-                Icon(Icons.email, color: UIColor.iconsColor),
+                const Icon(Icons.email_outlined, color: UIColor.textMain,),
                 const SizedBox(width: 4.0),
-                Text(email),
+                Text(email, style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: UIColor.textMain)),
                 const Spacer(),
-                Icon(Icons.phone, color: UIColor.iconsColor),
+                const Icon(Icons.phone, color: UIColor.textMain),
                 const SizedBox(width: 4.0),
-                Text(phone),
+                Text(phone, style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: UIColor.textMain)),
               ],
             ),
             const SizedBox(height: 12.0),
@@ -65,15 +65,39 @@ class AppointmentCard extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('Data:', style: Theme.of(context).textTheme.bodyLarge),
-                    Text(date, style: Theme.of(context).textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
+                    const Text(
+                      'Date',
+                      style: TextStyle(
+                        fontFamily: 'Poppins',
+                        color: UIColor.textMain,
+                      )),
+                    Text(
+                      date,
+                      style: const TextStyle(
+                        fontFamily: 'Poppins',
+                        color: UIColor.textMain,
+                        fontWeight: FontWeight.bold,
+                      )),
                   ],
                 ),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('Horário:', style: Theme.of(context).textTheme.bodyLarge),
-                    Text(time, style: Theme.of(context).textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
+                    const Text(
+                      'Time',
+                      style: TextStyle(
+                        fontFamily: 'Poppins',
+                        color: UIColor.textMain,
+                      ),
+                    ),
+                    Text(
+                      time,
+                      style: const TextStyle(
+                        fontFamily: 'Poppins',
+                        color: UIColor.textMain,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                   ],
                 ),
               ],
@@ -84,8 +108,21 @@ class AppointmentCard extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('Endereço:', style: Theme.of(context).textTheme.bodyLarge),
-                Text(address, style: Theme.of(context).textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.bold)),
+                const Text(
+                  'Address',
+                  style: TextStyle(
+                    fontFamily: 'Poppins',
+                    color: UIColor.textMain,
+                  ),
+                ),
+                Text(
+                  address,
+                  style: const TextStyle(
+                    fontFamily: 'Poppins',
+                    color: UIColor.textMain,
+                    fontWeight: FontWeight.bold,
+                  ), 
+                ),
               ],
             ),
             const SizedBox(height: 16.0),
