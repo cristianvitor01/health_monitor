@@ -4,6 +4,7 @@ import './widgets/dashboard_head.dart';
 import './widgets/search_box.dart';
 import './widgets/appointment_card.dart';
 import './widgets/medication_card.dart';
+import './widgets/bottom_nav_bar.dart';
 
 void main() {
   runApp(const MainApp());
@@ -42,7 +43,7 @@ class DashboardPage extends StatelessWidget {
               const SizedBox(width: 10.0),
               Stack(
                 children: [
-                  Container(  // Botão de notificação
+                  Container( // Botão de notificação
                     decoration: BoxDecoration(
                         color: UIColor.iconsColor,
                         borderRadius: BorderRadius.circular(14.0)),
@@ -100,6 +101,7 @@ class DashboardPage extends StatelessWidget {
           ),
         ],
       ),
+      bottomNavigationBar: BottomNavBar(), // Barra de navegação fixa
     );
   }
 }
