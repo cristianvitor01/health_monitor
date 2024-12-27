@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../utils/app_colors.dart'; 
+import '../utils/app_colors.dart';
 
 class AppointmentCard extends StatelessWidget {
   final String doctorName;
@@ -38,8 +38,14 @@ class AppointmentCard extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(doctorName, style: Theme.of(context).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold, color: UIColor.textMain)),
-                Text(doctorSpecialty, style: Theme.of(context).textTheme.bodySmall?.copyWith(color: UIColor.textMain)),
+                Text(doctorName,
+                    style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                        fontWeight: FontWeight.bold, color: UIColor.textMain)),
+                Text(doctorSpecialty,
+                    style: Theme.of(context)
+                        .textTheme
+                        .bodySmall
+                        ?.copyWith(color: UIColor.textMain)),
               ],
             ),
             const SizedBox(height: 8.0),
@@ -47,13 +53,24 @@ class AppointmentCard extends StatelessWidget {
             // Ícones de Contato
             Row(
               children: [
-                const Icon(Icons.email_outlined, color: UIColor.textMain,),
+                const Icon(
+                  Icons.email_outlined,
+                  color: UIColor.textMain,
+                ),
                 const SizedBox(width: 4.0),
-                Text(email, style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: UIColor.textMain)),
+                Text(email,
+                    style: Theme.of(context)
+                        .textTheme
+                        .bodyMedium
+                        ?.copyWith(color: UIColor.textMain)),
                 const Spacer(),
                 const Icon(Icons.phone, color: UIColor.textMain),
                 const SizedBox(width: 4.0),
-                Text(phone, style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: UIColor.textMain)),
+                Text(phone,
+                    style: Theme.of(context)
+                        .textTheme
+                        .bodyMedium
+                        ?.copyWith(color: UIColor.textMain)),
               ],
             ),
             const SizedBox(height: 12.0),
@@ -65,19 +82,17 @@ class AppointmentCard extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text(
-                      'Date',
-                      style: TextStyle(
-                        fontFamily: 'Poppins',
-                        color: UIColor.textMain,
-                      )),
-                    Text(
-                      date,
-                      style: const TextStyle(
-                        fontFamily: 'Poppins',
-                        color: UIColor.textMain,
-                        fontWeight: FontWeight.bold,
-                      )),
+                    const Text('Date',
+                        style: TextStyle(
+                          fontFamily: 'Poppins',
+                          color: UIColor.textMain,
+                        )),
+                    Text(date,
+                        style: const TextStyle(
+                          fontFamily: 'Poppins',
+                          color: UIColor.textMain,
+                          fontWeight: FontWeight.bold,
+                        )),
                   ],
                 ),
                 Column(
@@ -119,9 +134,10 @@ class AppointmentCard extends StatelessWidget {
                   address,
                   style: const TextStyle(
                     fontFamily: 'Poppins',
+                    fontSize: 14.0,
                     color: UIColor.textMain,
                     fontWeight: FontWeight.bold,
-                  ), 
+                  ),
                 ),
               ],
             ),
@@ -131,23 +147,41 @@ class AppointmentCard extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                IconButton(
-                  icon: const Icon(Icons.email, color: UIColor.iconsColor),
-                  onPressed: () {
-                    debugPrint('Email button pressed');
-                  },
+                Material(
+                  elevation: 1,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: IconButton(
+                    icon: const Icon(Icons.email, color: UIColor.iconsColor),
+                    onPressed: () {
+                      debugPrint('Email button pressed');
+                    },
+                  ),
                 ),
-                IconButton(
-                  icon: const Icon(Icons.phone, color: UIColor.iconsColor),
-                  onPressed: () {
-                    debugPrint('Phone button pressed');
-                  },
+                Material(
+                  elevation: 1,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: IconButton(
+                    icon: const Icon(Icons.phone, color: UIColor.iconsColor),
+                    onPressed: () {
+                      debugPrint('Phone button pressed');
+                    },
+                  ),
                 ),
-                IconButton(
-                  icon: const Icon(Icons.edit, color: UIColor.iconsColor),
-                  onPressed: () {
-                    debugPrint('Edit button pressed');
-                  },
+                Material(
+                  elevation: 1,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: IconButton(
+                    icon: const Icon(Icons.edit, color: UIColor.iconsColor),
+                    onPressed: () {
+                      debugPrint('Edit button pressed');
+                    },
+                  ),
                 ),
               ],
             ),
@@ -157,4 +191,3 @@ class AppointmentCard extends StatelessWidget {
     );
   }
 }
-
