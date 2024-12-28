@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import '../../utils/app_colors.dart';
-import 'widgets/dashboard_head.dart';
-import 'widgets/search_box.dart';
-import 'widgets/appointment_card.dart';
-import 'widgets/medication_card.dart';
-import 'widgets/bottom_nav_bar.dart';
-import 'widgets/popup_menu_buttom.dart';
+import '../widgets/dashboard_head.dart';
+import '../widgets/search_box.dart';
+import '../widgets/appointment_card.dart';
+import '../widgets/medication_card.dart';
+import '../widgets/bottom_nav_bar.dart';
+import '../widgets/popup_menu_buttom.dart';
 
 class DashboardPage extends StatelessWidget {
   const DashboardPage({super.key});
@@ -20,7 +20,7 @@ class DashboardPage extends StatelessWidget {
             // Para permitir rolagem
             padding: const EdgeInsets.all(16.0),
             children: [
-              const DashboardHeader(), // Cabeçalho no topo
+              const DashboardHeader(title: 'Dashboard',), // Cabeçalho no topo
               const SizedBox(height: 16.0), // Espaço entre widgets
               Row(
                 children: [

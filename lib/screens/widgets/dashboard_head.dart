@@ -1,20 +1,22 @@
 import 'package:flutter/material.dart';
-import '../../../utils/app_colors.dart'; 
+import '../../utils/app_colors.dart'; 
 
 class DashboardHeader extends StatelessWidget {
-  const DashboardHeader({super.key});
+  final String title;
+
+  const DashboardHeader({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {
-    return const SafeArea( // Garante que o conteúdo não fique sobre a barra de status
+    return SafeArea( // Garante que o conteúdo não fique sobre a barra de status
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 16.0),
+        padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 16.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
-              'Dashboard',
-              style: TextStyle(
+              title,
+              style: const TextStyle(
                 fontFamily: 'Poppins',
                 fontSize: 36.0,
                 fontWeight: FontWeight.bold,
@@ -22,7 +24,7 @@ class DashboardHeader extends StatelessWidget {
               ),
             ),
             // Avatar user
-             CircleAvatar(
+             const CircleAvatar(
               radius: 24.0,
               backgroundImage: AssetImage('assets/images/user_avatar.png'), 
             ),
