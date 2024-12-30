@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:health_monitor/utils/app_colors.dart';
 import '../widgets/dashboard_head.dart';
-import '../widgets/appointment_card.dart';
 import '../widgets/popup_menu_buttom.dart';
 import '../widgets/bottom_nav_bar.dart';
+import '../widgets/medical_info_card.dart';
 
 class MedicalInfoPage extends StatelessWidget {
   const MedicalInfoPage({super.key});
@@ -22,14 +22,23 @@ class MedicalInfoPage extends StatelessWidget {
               SizedBox(height: 16.0), // Espaço entre widgets
               // const SizedBox(height: 24.0),
               // CRIAR NOVO WIDGET DE INFORMAÇÕES MEDICAS ...............................................
-              AppointmentCard( // appointment_card
-                doctorName: 'Dr. Schmitz',
-                doctorSpecialty: 'Neurologist',
-                email: 'schmitz@aol.de',
-                phone: '+49 989 232',
-                date: '25/12/2024',
-                time: '16:30',
-                address: 'Winklergasse 45, 10117 Berlin',
+              MedicalInfoCard(
+                userName: 'John Smith',
+                gender: 'Male',
+                bday: '01/01/1990',
+                height: '1.80m',
+                weight: '80kg',
+                bloodGroup: 'A+',
+                covidVaccine: '01/01/2021',
+                tetanusVaccine: '01/01/2021',
+                typhusVaccine: '01/01/2021',
+                hepatitisVaccine: '01/01/2021',
+                surgery: '21.09.2012  ',
+                allergies: 'Peanuts',
+                emergencyContacName: 'Pamela Smith',
+                emergencyContacNumber: '+49 600 500',
+                emergencyContacAddress: 'Sunset Boulevard Berlin',
+                emergencyContacEmail: 'Pamela@smith.com',
               ),
             ],
           ),

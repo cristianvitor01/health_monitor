@@ -10,6 +10,7 @@ class BottomNavBar extends StatelessWidget {
     Icons.search,
     Icons.upload,
     Icons.person,
+    Icons.home
   ];
 
   @override

@@ -14,7 +14,7 @@ class MainApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       // title: 'Health Monitor',
-      home: MedicalInfoPage(), // Chamando a DashboardPage
+      home: MedicalInfoPage(), 
     );
   }
 }
