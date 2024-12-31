@@ -8,4 +8,5 @@ class UIColor {
   static const Color textMain = Color(0xFF003F5F);
   static const Color iconsColor = Color(0xFF0099FF);
   static const Color notificationsColor = Color(0xFFDE3730);
+  static const Color sliderControl = Color(0XFFD16C9E);
 }
