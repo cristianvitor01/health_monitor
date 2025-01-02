@@ -5,7 +5,8 @@ import 'package:flutter/material.dart';
 // import 'screens/symptoms/symptoms_page.dart';
 // import 'screens/medications/medication_page.dart';
 // import 'screens/appointment/appointment_page.dart';
-import 'screens/news/news_page.dart';
+// import 'screens/news/news_page.dart';
+import 'screens/rewards/rewards_page.dart';
 
 void main() {
   runApp(const MainApp());
@@ -19,7 +20,7 @@ class MainApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       // title: 'Health Monitor',
-      home: NewsPage(), 
+      home: RewardsPage(), 
     );
   }
 }
