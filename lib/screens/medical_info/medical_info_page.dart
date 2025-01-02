@@ -20,8 +20,6 @@ class MedicalInfoPage extends StatelessWidget {
             children: const [
               DashboardHeader(title: 'Medical Info',), // Cabeçalho no topo
               SizedBox(height: 16.0), // Espaço entre widgets
-              // const SizedBox(height: 24.0),
-              // CRIAR NOVO WIDGET DE INFORMAÇÕES MEDICAS ...............................................
               MedicalInfoCard(
                 userName: 'John Smith',
                 gender: 'Male',
