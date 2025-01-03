@@ -39,16 +39,27 @@ class AppointmentCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(doctorName,
-                    style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                        fontWeight: FontWeight.bold, color: UIColor.textMain)),
+                    style: const TextStyle(
+                      fontFamily: 'Poppins',
+                      color: UIColor.textMain,
+                      fontSize: 18.0,
+                      fontWeight: FontWeight.w600,
+                      height: 1.33,
+                      letterSpacing: 0.50,
+                    )),
+                const SizedBox(height: 8.0),
                 Text(doctorSpecialty,
-                    style: Theme.of(context)
-                        .textTheme
-                        .bodySmall
-                        ?.copyWith(color: UIColor.textMain)),
+                    style: const TextStyle(
+                      fontFamily: 'Poppins',
+                      color: UIColor.textMain,
+                      fontSize: 10.0,
+                      fontWeight: FontWeight.w400,
+                      height: 1.60,
+                      letterSpacing: 0.50,
+                    )),
               ],
             ),
-            const SizedBox(height: 8.0),
+            const SizedBox(height: 24.0),
 
             // Ícones de Contato
             Row(
@@ -56,68 +67,96 @@ class AppointmentCard extends StatelessWidget {
                 const Icon(
                   Icons.email_outlined,
                   color: UIColor.textMain,
+                  size: 20,
                 ),
-                const SizedBox(width: 4.0),
+                const SizedBox(width: 8.0),
                 Text(email,
-                    style: Theme.of(context)
-                        .textTheme
-                        .bodyMedium
-                        ?.copyWith(color: UIColor.textMain)),
-                const Spacer(),
-                const Icon(Icons.phone, color: UIColor.textMain),
-                const SizedBox(width: 4.0),
+                    style: const TextStyle(
+                      fontFamily: 'Poppins',
+                      fontWeight: FontWeight.w400,
+                      fontSize: 10.0,
+                      height: 1.60,
+                      letterSpacing: 0.50,
+                      color: UIColor.textMain,
+                    )),
+                const SizedBox(width: 8.0),
+                const Icon(
+                  Icons.phone,
+                  color: UIColor.textMain,
+                  size: 20,
+                ),
+                const SizedBox(width: 8.0),
                 Text(phone,
-                    style: Theme.of(context)
-                        .textTheme
-                        .bodyMedium
-                        ?.copyWith(color: UIColor.textMain)),
+                    style: const TextStyle(
+                      fontFamily: 'Poppins',
+                      fontWeight: FontWeight.w400,
+                      fontSize: 10.0,
+                      height: 1.60,
+                      letterSpacing: 0.50,
+                      color: UIColor.textMain,
+                    )),
               ],
             ),
-            const SizedBox(height: 12.0),
+            const SizedBox(height: 24.0),
 
             // Data e Horário
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const Text('Date',
                         style: TextStyle(
+                          fontSize: 10,
                           fontFamily: 'Poppins',
-                          color: UIColor.textMain,
+                          fontWeight: FontWeight.w400,
+                          height: 1.60,
+                          letterSpacing: 0.50,
                         )),
+                    const SizedBox(height: 8.0),
                     Text(date,
                         style: const TextStyle(
+                          fontSize: 14,
                           fontFamily: 'Poppins',
-                          color: UIColor.textMain,
-                          fontWeight: FontWeight.bold,
+                          fontWeight: FontWeight.w600,
+                          height: 1.71,
+                          letterSpacing: 0.50,
                         )),
                   ],
                 ),
+                const SizedBox(width: 24.0),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const Text(
                       'Time',
                       style: TextStyle(
+                        fontSize: 10,
                         fontFamily: 'Poppins',
-                        color: UIColor.textMain,
+                        fontWeight: FontWeight.w400,
+                        height: 1.60,
+                        letterSpacing: 0.50,
                       ),
                     ),
+                    const SizedBox(height: 8.0),
                     Text(
                       time,
                       style: const TextStyle(
+                        fontSize: 14,
                         fontFamily: 'Poppins',
-                        color: UIColor.textMain,
-                        fontWeight: FontWeight.bold,
+                        fontWeight: FontWeight.w600,
+                        height: 1.71,
+                        letterSpacing: 0.50,
                       ),
                     ),
                   ],
                 ),
               ],
             ),
-            const SizedBox(height: 12.0),
+            const SizedBox(height: 24.0),
 
             // Endereço
             Column(
@@ -126,26 +165,33 @@ class AppointmentCard extends StatelessWidget {
                 const Text(
                   'Address',
                   style: TextStyle(
+                    fontSize: 10,
                     fontFamily: 'Poppins',
+                    fontWeight: FontWeight.w400,
+                    height: 1.60,
+                    letterSpacing: 0.50,
                     color: UIColor.textMain,
                   ),
                 ),
+                const SizedBox(height: 8.0),
                 Text(
                   address,
                   style: const TextStyle(
+                    fontSize: 14,
                     fontFamily: 'Poppins',
-                    fontSize: 14.0,
+                    fontWeight: FontWeight.w600,
+                    height: 1.71,
+                    letterSpacing: 0.50,
                     color: UIColor.textMain,
-                    fontWeight: FontWeight.bold,
                   ),
                 ),
               ],
             ),
-            const SizedBox(height: 16.0),
+            const SizedBox(height: 24.0),
 
             // Botões de Ação
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 Material(
                   elevation: 1,
@@ -153,12 +199,14 @@ class AppointmentCard extends StatelessWidget {
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: IconButton(
-                    icon: const Icon(Icons.email, color: UIColor.iconsColor),
+                    icon: const Icon(Icons.email_outlined,
+                        color: UIColor.iconsColor),
                     onPressed: () {
                       debugPrint('Email button pressed');
                     },
                   ),
                 ),
+                const SizedBox(width: 10),
                 Material(
                   elevation: 1,
                   shape: RoundedRectangleBorder(
@@ -171,18 +219,21 @@ class AppointmentCard extends StatelessWidget {
                     },
                   ),
                 ),
+                const SizedBox(width: 10),
                 Material(
                   elevation: 1,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: IconButton(
-                    icon: const Icon(Icons.edit, color: UIColor.iconsColor),
+                    icon: const Icon(Icons.mode_edit_outlined,
+                        color: UIColor.iconsColor),
                     onPressed: () {
                       debugPrint('Edit button pressed');
                     },
                   ),
                 ),
+                const SizedBox(width: 10),
               ],
             ),
           ],

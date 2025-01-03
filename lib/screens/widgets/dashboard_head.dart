@@ -19,7 +19,8 @@ class DashboardHeader extends StatelessWidget {
               style: const TextStyle(
                 fontFamily: 'Poppins',
                 fontSize: 36.0,
-                fontWeight: FontWeight.bold,
+                fontWeight: FontWeight.w700,
+                height: 0.78,
                 color: UIColor.textMain, 
               ),
             ),

@@ -18,10 +18,10 @@ class DashboardPage extends StatelessWidget {
         children: [
           ListView(
             // Para permitir rolagem
-            padding: const EdgeInsets.all(16.0),
+            padding: const EdgeInsets.all(26.0),
             children: [
               const DashboardHeader(title: 'Dashboard',), // Cabeçalho no topo
-              const SizedBox(height: 16.0), // Espaço entre widgets
+              const SizedBox(height: 30.0), // Espaço entre widgets
               Row(
                 children: [
                   const Expanded(
@@ -56,13 +56,19 @@ class DashboardPage extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(height: 24.0),
+              const SizedBox(height: 30.0),
               const Text(
                 '  Your next Appointment',
                 style: TextStyle(
-                    fontFamily: 'Poppins', fontSize: 24.0, color: UIColor.textMain),
+                    fontFamily: 'Poppins',
+                    fontSize: 24.0,
+                    fontWeight: FontWeight.w400,
+                    height: 1.33,
+                    letterSpacing: -1.20,
+                    color: UIColor.textMain,
+                ),
               ),
-              const SizedBox(height: 16.0),
+              const SizedBox(height: 20.0),
               const AppointmentCard( // appointment_card
                 doctorName: 'Dr. Schmitz',
                 doctorSpecialty: 'Neurologist',
@@ -72,13 +78,19 @@ class DashboardPage extends StatelessWidget {
                 time: '16:30',
                 address: 'Winklergasse 45, 10117 Berlin',
               ),
-              const SizedBox(height: 24.0),
+              const SizedBox(height: 30.0),
               const Text(
                 '   Your Medications Today',
                 style: TextStyle(
-                    fontFamily: 'Poppins', fontSize: 24.0, color: UIColor.textMain),
+                    fontFamily: 'Poppins',
+                    fontSize: 24.0,
+                    fontWeight: FontWeight.w400,
+                    height: 1.33,
+                    letterSpacing: -1.20,
+                    color: UIColor.textMain,
+                ),
               ),
-              const SizedBox(height: 16.0),
+              const SizedBox(height: 20.0),
               const MedicationCard( // medication_card
                 medicationName: 'Aspirin',
                 medicationDescription: 'ASS, 500mg BAYER, coated pills',
@@ -92,7 +104,7 @@ class DashboardPage extends StatelessWidget {
           const Positioned(
             bottom: 20.0, 
             right: 22.0,
-            child: PopupMenuButtonWidget(), // Adicionando o PopupMenuButtonWidget
+            child: PopupMenuButtonWidget(), 
           ),
         ],
       ),

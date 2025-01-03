@@ -16,7 +16,7 @@ class SearchBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
-      padding: const EdgeInsets.symmetric(horizontal: 8.0), // Menor padding para ícone mais próximo
+      padding: const EdgeInsets.symmetric(horizontal: 8.0), // Controla o espaço entre o texto e o icone
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(14.0),
@@ -34,13 +34,18 @@ class SearchBox extends StatelessWidget {
         style: const TextStyle(
           fontSize: 14,
           fontFamily: 'Poppins',
+          fontWeight: FontWeight.w400,
+          height: 1.43,
+          letterSpacing: 0.25,
         ),
         decoration: InputDecoration(
           hintText: hintText,
           hintStyle: const TextStyle(
             fontSize: 14,
             fontFamily: 'Poppins',
-            color: UIColor.textMain, // Cor do texto de dica
+            fontWeight: FontWeight.w400,
+            color: UIColor.textMain,
+             // Cor do texto de dica
           ),
           border: InputBorder.none,
           suffixIcon: icon,
