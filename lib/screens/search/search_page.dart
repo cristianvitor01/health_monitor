@@ -11,7 +11,7 @@ class SearchPage extends StatelessWidget {
       backgroundColor: UIColor.backgroundColor,
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(16.0), // Espaçamento consistente
+          padding: const EdgeInsets.all(26.0), // Espaçamento consistente
           child: Column(
             children: [
               Row(
@@ -23,15 +23,15 @@ class SearchPage extends StatelessWidget {
                     ),
                   ),
                   TextButton(
-                    onPressed: () {
-                      // Adicione funcionalidade ao botão 'Cancel'
-                    },
+                    onPressed: () {},
                     child: const Text(
                       'Cancel',
                       style: TextStyle(
+                        fontSize: 14,
                         fontFamily: 'Poppins',
-                        fontSize: 16.0,
                         fontWeight: FontWeight.w500,
+                        height: 1.43,
+                        letterSpacing: 0.10,
                         color: UIColor.textMain,
                       ),
                     ),
@@ -46,18 +46,22 @@ class SearchPage extends StatelessWidget {
                       icon: Icons.medical_services,
                       title: 'Last seen appointment',
                     ),
+                    SizedBox(height: 25.0),
                     SuggestionTile(
                       icon: Icons.medication,
                       title: 'Last searched medication',
                     ),
+                    SizedBox(height: 25.0),
                     SuggestionTile(
                       icon: Icons.edit,
                       title: 'Last searched symptom',
                     ),
+                    SizedBox(height: 25.0),
                     SuggestionTile(
                       icon: Icons.upload_file,
                       title: 'Last seen file',
                     ),
+                    SizedBox(height: 25.0),
                   ],
                 ),
               ),
@@ -81,16 +85,24 @@ class SuggestionTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      leading: Icon(icon, color: UIColor.textMain),
-      title: Text(
-        title,
-        style: const TextStyle(
-          fontFamily: 'Poppins',
-          fontSize: 16.0,
-          fontWeight: FontWeight.w500,
-          color: UIColor.textMain,
-        ),
+    return Padding(
+      padding: const EdgeInsets.all(26.0),
+      child: Row(
+        children: [
+          Icon(icon, color: UIColor.textMain),
+          const SizedBox(width: 22.0),
+          Text(
+            title,
+            style: const TextStyle(
+              fontSize: 16,
+              fontFamily: 'Poppins',
+              fontWeight: FontWeight.w500,
+              height: 1.50,
+              letterSpacing: 0.15,
+              color: UIColor.textMain,
+            ),
+          ),
+        ],
       ),
     );
   }
