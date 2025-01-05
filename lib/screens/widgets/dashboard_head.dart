@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../utils/app_colors.dart'; 
+import '../../utils/app_colors.dart';
+import 'menu_sheet.dart'; // Certifique-se de que o caminho está correto
 
 class DashboardHeader extends StatelessWidget {
   final String title;
@@ -8,7 +9,7 @@ class DashboardHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea( // Garante que o conteúdo não fique sobre a barra de status
+    return SafeArea(
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 16.0),
         child: Row(
@@ -21,13 +22,24 @@ class DashboardHeader extends StatelessWidget {
                 fontSize: 36.0,
                 fontWeight: FontWeight.w700,
                 height: 0.78,
-                color: UIColor.textMain, 
+                color: UIColor.textMain,
               ),
             ),
             // Avatar user
-             const CircleAvatar(
-              radius: 24.0,
-              backgroundImage: AssetImage('assets/images/user_avatar.png'), 
+            GestureDetector(
+              onTap: () {
+                showModalBottomSheet(
+                  context: context,
+                  isScrollControlled: true, // Permite que o modal ocupe toda a tela
+                  builder: (BuildContext context) {
+                    return const MenuSheet();
+                  },
+                );
+              },
+              child: const CircleAvatar(
+                radius: 24.0,
+                backgroundImage: AssetImage('assets/images/user_avatar.png'),
+              ),
             ),
           ],
         ),
