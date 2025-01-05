@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:health_monitor/utils/app_colors.dart';
 import '../widgets/search_box.dart';
+import '../widgets/bottom_nav_bar.dart';
 
 class SearchPage extends StatelessWidget {
   const SearchPage({super.key});
@@ -69,6 +70,7 @@ class SearchPage extends StatelessWidget {
           ),
         ),
       ),
+      bottomNavigationBar: BottomNavBar(), // Barra de navegação fixa
     );
   }
 }

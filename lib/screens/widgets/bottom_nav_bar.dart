@@ -13,6 +13,15 @@ class BottomNavBar extends StatelessWidget {
     Icons.home
   ];
 
+  // Cada ícone tem uma rota associada
+  final List<String> navRoutes = [
+    '/calendar',
+    '/search',
+    '/', // Criar tela de Upload
+    '/medical_info', 
+    '/'
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -35,18 +44,20 @@ class BottomNavBar extends StatelessWidget {
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly, // Distribui os ícones igualmente
-        children: navIcons.map((icon) {
+        children: List.generate(navIcons.length, (index) {
           return Material(
             color: Colors.transparent,
             child: InkWell(
               borderRadius: BorderRadius.circular(30),
               onTap: () {
-                debugPrint('Ícone $icon pressionado');
+                // debugPrint('Ícone $icon pressionado');
+                Navigator.pushNamed(context, navRoutes[index]);
               },
               child: Container(
                 padding: const EdgeInsets.all(10),
                 child: Icon(
-                  icon,
+                  // icon,
+                  navIcons[index],
                   size: 25,
                   color: UIColor.textMain, // Cor dos ícones
                 ),
