@@ -8,6 +8,7 @@ import 'screens/appointment/appointment_page.dart';
 import 'screens/news/news_page.dart';
 import 'screens/rewards/rewards_page.dart';
 import 'screens/calendar/calendar_page.dart';
+import 'screens/upload/upload_page.dart';
 
 void main() {
   runApp(const MainApp());
@@ -32,6 +33,7 @@ class MainApp extends StatelessWidget {
         '/news': (context) => const NewsPage(),
         '/rewards': (context) => const RewardsPage(),
         '/calendar': (context) => const CalendarPage(),
+        '/upload': (context) => const UploadPage(),
       },
     );
   }

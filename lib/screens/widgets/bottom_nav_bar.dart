@@ -17,7 +17,7 @@ class BottomNavBar extends StatelessWidget {
   final List<String> navRoutes = [
     '/calendar',
     '/search',
-    '/', // Criar tela de Upload
+    '/upload', // Criar tela de Upload
     '/medical_info', 
     '/'
   ];
