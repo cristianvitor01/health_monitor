@@ -64,7 +64,7 @@ class UploadPage extends StatelessWidget {
                         size: 60.0,
                       ),
                       onPressed: () {
-                        print('Camera icon presionado');
+                        debugPrint('Camera icon presionado');
                       },
                     ),
                   ),
@@ -105,7 +105,7 @@ class UploadPage extends StatelessWidget {
                         size: 60.0,
                       ),
                       onPressed: () {
-                        print('Upload icon pressionado');
+                        debugPrint('Upload icon pressionado');
                       },
                     ),
                   ),

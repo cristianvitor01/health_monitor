@@ -119,7 +119,7 @@ class MedicationCard extends StatelessWidget {
                     ),
                     onPressed: () {
                       // Função de edição
-                      debugPrint('Editar clicado');
+                       Navigator.pushNamed(context, '/edit-medications');
                     },
                   ),
                 ),

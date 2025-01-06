@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:health_monitor/utils/app_colors.dart';
 import '../widgets/search_box.dart';
 import '../widgets/bottom_nav_bar.dart';
+// import '../medications/medication_page.dart';
 
 class SearchPage extends StatelessWidget {
   const SearchPage({super.key});
@@ -24,7 +25,9 @@ class SearchPage extends StatelessWidget {
                     ),
                   ),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
                     child: const Text(
                       'Cancel',
                       style: TextStyle(
@@ -42,27 +45,39 @@ class SearchPage extends StatelessWidget {
               const SizedBox(height: 20.0),
               Expanded(
                 child: ListView(
-                  children: const [
-                    SuggestionTile(
-                      icon: Icons.medical_services,
-                      title: 'Last seen appointment',
+                  children: [
+                    GestureDetector(
+                      onTap: () => Navigator.pushNamed(context, '/appointment'),
+                      child: const SuggestionTile(
+                        icon: Icons.medical_services,
+                        title: 'Last seen appointment',
+                      ),
                     ),
-                    SizedBox(height: 25.0),
-                    SuggestionTile(
-                      icon: Icons.medication,
-                      title: 'Last searched medication',
+                    const SizedBox(height: 25.0),
+                    GestureDetector(
+                      onTap: () => Navigator.pushNamed(context, '/medications'),
+                      child: const SuggestionTile(
+                        icon: Icons.medication,
+                        title: 'Last searched medication',
+                      ),
                     ),
-                    SizedBox(height: 25.0),
-                    SuggestionTile(
-                      icon: Icons.edit,
-                      title: 'Last searched symptom',
+                    const SizedBox(height: 25.0),
+                    GestureDetector(
+                      onTap: () => Navigator.pushNamed(context, '/symptoms'),
+                      child: const SuggestionTile(
+                        icon: Icons.edit,
+                        title: 'Last searched symptom',
+                      ),
                     ),
-                    SizedBox(height: 25.0),
-                    SuggestionTile(
-                      icon: Icons.upload_file,
-                      title: 'Last seen file',
+                    const SizedBox(height: 25.0),
+                    GestureDetector(
+                      onTap: () => Navigator.pushNamed(context, '/upload'),
+                      child: const SuggestionTile(
+                        icon: Icons.upload_file,
+                        title: 'Last seen file',
+                      ),
                     ),
-                    SizedBox(height: 25.0),
+                    const SizedBox(height: 25.0),
                   ],
                 ),
               ),

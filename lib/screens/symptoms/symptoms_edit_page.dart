@@ -4,8 +4,8 @@ import '../widgets/popup_menu_buttom.dart';
 import '../widgets/bottom_nav_bar.dart';
 import '../widgets/symptoms_card.dart';
 
-class SymptomsPage extends StatelessWidget {
-  const SymptomsPage({super.key});
+class SymptomsEditPage extends StatelessWidget {
+  const SymptomsEditPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,8 @@ class SymptomsPage extends StatelessWidget {
               padding: const EdgeInsets.all(16.0),
               children: const [
                 SizedBox(height: 16.0), // Espaço entre widgets
-                SymptomsCard(symptomName: 'Headache', symptomDescription: 'Temples Throbbing, couldnt work ', symptomDate: '20.04.2023', symptomTime: '16:30 - 18:30')
+                // Alterar para o card de Sintomas
+                SymptomsCard(symptomName: 'Sintomas edit page', symptomDescription: 'Temples Throbbing, couldnt work ', symptomDate: '20.04.2023', symptomTime: '16:30 - 18:30')
               ],
             ),
             const Positioned(

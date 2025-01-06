@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:health_monitor/utils/app_colors.dart';
 import '../widgets/popup_menu_buttom.dart';
 import '../widgets/bottom_nav_bar.dart';
-import '../widgets/symptoms_card.dart';
+import '../widgets/medication_card.dart';
 
-class SymptomsPage extends StatelessWidget {
-  const SymptomsPage({super.key});
+class MedicationsEditPage extends StatelessWidget {
+  const MedicationsEditPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,13 +19,22 @@ class SymptomsPage extends StatelessWidget {
               padding: const EdgeInsets.all(16.0),
               children: const [
                 SizedBox(height: 16.0), // Espaço entre widgets
-                SymptomsCard(symptomName: 'Headache', symptomDescription: 'Temples Throbbing, couldnt work ', symptomDate: '20.04.2023', symptomTime: '16:30 - 18:30')
+                // Alterar para o card de Sintomas
+                MedicationCard(
+                  // medication_card
+                  medicationName: 'Medication Edit Page',
+                  medicationDescription: 'ASS, 500mg BAYER, coated pills',
+                  daily: '2x Daily',
+                  time1: '06:00',
+                  time2: '22:00',
+                ),
               ],
             ),
             const Positioned(
-              bottom: 20.0, 
+              bottom: 20.0,
               right: 22.0,
-              child: PopupMenuButtonWidget(), // Adicionando o PopupMenuButtonWidget
+              child:
+                  PopupMenuButtonWidget(), // Adicionando o PopupMenuButtonWidget
             ),
           ],
         ),

@@ -128,8 +128,7 @@ class _SymptomsCardState extends State<SymptomsCard> {
                       color: UIColor.iconsColor,
                     ),
                     onPressed: () {
-                      // Função de edição
-                      debugPrint('Editar clicado');
+                      Navigator.pushNamed(context, '/edit-symptoms');
                     },
                   ),
                 ),
