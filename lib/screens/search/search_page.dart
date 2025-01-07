@@ -9,83 +9,85 @@ class SearchPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: UIColor.backgroundColor,
-      body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.all(26.0), // Espaçamento consistente
-          child: Column(
-            children: [
-              Row(
-                children: [
-                  const Expanded(
-                    child: SearchBox(
-                      hintText: 'Search your records',
-                      icon: Icon(Icons.search, color: UIColor.textMain),
-                    ),
-                  ),
-                  TextButton(
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
-                    child: const Text(
-                      'Cancel',
-                      style: TextStyle(
-                        fontSize: 14,
-                        fontFamily: 'Poppins',
-                        fontWeight: FontWeight.w500,
-                        height: 1.43,
-                        letterSpacing: 0.10,
-                        color: UIColor.textMain,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-              const SizedBox(height: 20.0),
-              Expanded(
-                child: ListView(
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: UIColor.backgroundColor,
+        body: SafeArea(
+          child: Padding(
+            padding: const EdgeInsets.all(26.0), // Espaçamento consistente
+            child: Column(
+              children: [
+                Row(
                   children: [
-                    GestureDetector(
-                      onTap: () => Navigator.pushNamed(context, '/appointment'),
-                      child: const SuggestionTile(
-                        icon: Icons.medical_services,
-                        title: 'Last seen appointment',
+                    const Expanded(
+                      child: SearchBox(
+                        hintText: 'Search your records',
+                        icon: Icon(Icons.search, color: UIColor.textMain),
                       ),
                     ),
-                    const SizedBox(height: 25.0),
-                    GestureDetector(
-                      onTap: () => Navigator.pushNamed(context, '/medications'),
-                      child: const SuggestionTile(
-                        icon: Icons.medication,
-                        title: 'Last searched medication',
+                    TextButton(
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      child: const Text(
+                        'Cancel',
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontFamily: 'Poppins',
+                          fontWeight: FontWeight.w500,
+                          height: 1.43,
+                          letterSpacing: 0.10,
+                          color: UIColor.textMain,
+                        ),
                       ),
                     ),
-                    const SizedBox(height: 25.0),
-                    GestureDetector(
-                      onTap: () => Navigator.pushNamed(context, '/symptoms'),
-                      child: const SuggestionTile(
-                        icon: Icons.edit,
-                        title: 'Last searched symptom',
-                      ),
-                    ),
-                    const SizedBox(height: 25.0),
-                    GestureDetector(
-                      onTap: () => Navigator.pushNamed(context, '/upload'),
-                      child: const SuggestionTile(
-                        icon: Icons.upload_file,
-                        title: 'Last seen file',
-                      ),
-                    ),
-                    const SizedBox(height: 25.0),
                   ],
                 ),
-              ),
-            ],
+                const SizedBox(height: 20.0),
+                Expanded(
+                  child: ListView(
+                    children: [
+                      GestureDetector(
+                        onTap: () => Navigator.pushNamed(context, '/appointment'),
+                        child: const SuggestionTile(
+                          icon: Icons.medical_services,
+                          title: 'Last seen appointment',
+                        ),
+                      ),
+                      const SizedBox(height: 25.0),
+                      GestureDetector(
+                        onTap: () => Navigator.pushNamed(context, '/medications'),
+                        child: const SuggestionTile(
+                          icon: Icons.medication,
+                          title: 'Last searched medication',
+                        ),
+                      ),
+                      const SizedBox(height: 25.0),
+                      GestureDetector(
+                        onTap: () => Navigator.pushNamed(context, '/symptoms'),
+                        child: const SuggestionTile(
+                          icon: Icons.edit,
+                          title: 'Last searched symptom',
+                        ),
+                      ),
+                      const SizedBox(height: 25.0),
+                      GestureDetector(
+                        onTap: () => Navigator.pushNamed(context, '/upload'),
+                        child: const SuggestionTile(
+                          icon: Icons.upload_file,
+                          title: 'Last seen file',
+                        ),
+                      ),
+                      const SizedBox(height: 25.0),
+                    ],
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
+        bottomNavigationBar: BottomNavBar(), // Barra de navegação fixa
       ),
-      bottomNavigationBar: BottomNavBar(), // Barra de navegação fixa
     );
   }
 }
