@@ -11,4 +11,9 @@ class UIColor {
   static const Color sliderControl = Color(0XFFD16C9E);
   static const Color advertisementCard = Color(0XFFFFDEEC); // #ffffdeec
   static const Color plusFAB = Color(0xFFF273B2);
+  static const Color progressWhel = Color(0xFFF273B2);
+  static const Color progressWheltopo = Color(0xFFF064AA);
+  static const Color progressWhel2 = Color(0xFF4C3BB2);
+  static const Color progressWhel2topo = Color.fromARGB(255, 47, 35, 116);
+
 }
