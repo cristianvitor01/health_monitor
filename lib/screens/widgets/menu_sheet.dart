@@ -11,8 +11,7 @@ class MenuSheet extends StatelessWidget {
         padding: const EdgeInsets.all(26.0),
         child: Container(
           height:
-              MediaQuery.of(context).size.height, // Ocupa toda a altura da tela
-          // padding: const EdgeInsets.all(26.0),
+              MediaQuery.of(context).size.height*0.9, 
           decoration: const BoxDecoration(
             color: UIColor.backgroundColor,
             borderRadius: BorderRadius.only(
@@ -20,7 +19,7 @@ class MenuSheet extends StatelessWidget {
               topRight: Radius.circular(28.0),
             ),
           ),
-          child: const Column(
+          child: Column(
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -30,22 +29,27 @@ class MenuSheet extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    Text(
-                      'DONE',
-                      style: TextStyle(
-                        fontSize: 14,
-                        fontFamily: 'Poppins',
-                        fontWeight: FontWeight.w500,
-                        height: 1.43,
-                        letterSpacing: 0.10,
-                        color: UIColor.textMain,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
+                      child: const Text(
+                        'DONE',
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontFamily: 'Poppins',
+                          fontWeight: FontWeight.w800,
+                          height: 1.43,
+                          letterSpacing: 0.10,
+                          color: UIColor.textMain,
+                        ),
                       ),
                     )
                   ],
                 ),
               ),
-              SizedBox(height: 60.0),
-              Text(
+              const SizedBox(height: 60.0),
+              const Text(
                 'Main Menu',
                 style: TextStyle(
                   fontSize: 24,
@@ -56,8 +60,8 @@ class MenuSheet extends StatelessWidget {
                   color: UIColor.textMain,
                 ),
               ),
-              SizedBox(height: 35.0),
-              Row(
+              const SizedBox(height: 35.0),
+              const  Row(
                 children: [
                   Icon(
                     size: 25.0,
@@ -78,8 +82,8 @@ class MenuSheet extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 35.0),
-              Row(
+              const SizedBox(height: 35.0),
+              const Row(
                 children: [
                   Icon(
                     size: 25.0,
@@ -100,8 +104,8 @@ class MenuSheet extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 35.0),
-              Row(
+              const SizedBox(height: 35.0),
+              const Row(
                 children: [
                   Icon(
                     size: 25.0,
@@ -122,8 +126,8 @@ class MenuSheet extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 60.0),
-              Text(
+              const SizedBox(height: 60.0),
+              const Text(
                 'Preferences',
                 style: TextStyle(
                   fontSize: 24,
@@ -134,8 +138,8 @@ class MenuSheet extends StatelessWidget {
                   color: UIColor.textMain,
                 ),
               ),
-              SizedBox(height: 35.0),
-              Row(
+              const SizedBox(height: 35.0),
+              const Row(
                 children: [
                   Icon(
                     size: 25.0,
@@ -156,8 +160,8 @@ class MenuSheet extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 35.0),
-              Row(
+              const SizedBox(height: 35.0),
+              const Row(
                 children: [
                   Icon(
                     size: 25.0,
@@ -178,8 +182,8 @@ class MenuSheet extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 240.0),
-              Row(
+              const SizedBox(height: 240.0),
+              const Row(
                 children: [
                   Icon(
                     size: 25.0,
@@ -200,8 +204,8 @@ class MenuSheet extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 35.0),
-              Row(
+              const SizedBox(height: 35.0),
+              const Row(
                 children: [
                   Icon(
                     size: 25.0,
