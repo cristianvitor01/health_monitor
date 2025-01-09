@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:health_monitor/screens/widgets/advertisement_card.dart';
-import 'package:health_monitor/screens/widgets/appointment_card.dart';
-import 'package:health_monitor/screens/widgets/symptoms_card.dart';
+import 'package:health_monitor/screens/widgets/track_reminder.dart';
 import '../../utils/app_colors.dart';
 import '../widgets/dashboard_head.dart';
-// import '../widgets/appointment_card.dart';
-import '../widgets/medication_card.dart';
+import '../widgets/appointment_card_reduced.dart';
 import '../widgets/bottom_nav_bar.dart';
+//import '../widgets/symptoms_card_reduced.dart';
+import '../widgets/advertisement_card.dart';
 
 class TimelineScreen extends StatelessWidget {
   const TimelineScreen({super.key});
@@ -26,7 +25,7 @@ class TimelineScreen extends StatelessWidget {
                   title: 'Your Timeline',
                 ), // Cabeçalho no topo
                 SizedBox(height: 30.0), // Espaço entre widgets
-                AppointmentCard(
+                AppointmentCardReduced(
                     doctorName: 'Dr. Schmitz',
                     doctorSpecialty: '-',
                     email: '-',
@@ -36,18 +35,10 @@ class TimelineScreen extends StatelessWidget {
                     address: '-'),
                 SizedBox(height: 30.0),
                 AdvertisementCard(),
-                SymptomsCard(
-                    symptomName: 'Track your Symptoms',
-                    symptomDescription: '-',
-                    symptomDate: '-',
-                    symptomTime: '-'),
+                SizedBox(height: 30.0),
+                TrackReminder(trackType: 'Symptoms'),
                 SizedBox(height: 20.0),
-                MedicationCard(
-                    medicationName: 'Take your Medication',
-                    medicationDescription: '-',
-                    daily: '-',
-                    time1: '-',
-                    time2: '-'),
+                TrackReminder(trackType: 'Medications'),
                 SizedBox(height: 40.0),
                 AdvertisementCard(),
                 SizedBox(height: 20.0),

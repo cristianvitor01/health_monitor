@@ -36,7 +36,9 @@ class DashboardPage extends StatelessWidget {
                               color: UIColor.iconsColor,
                               borderRadius: BorderRadius.circular(14.0)),
                           child: IconButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/timeline');
+                            },
                             icon:
                                 const Icon(Icons.notifications, color: Colors.white),
                           ),
