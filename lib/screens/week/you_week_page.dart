@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:health_monitor/screens/widgets/symptoms_card.dart';
 import '../../utils/app_colors.dart';
 import '../widgets/dashboard_head.dart';
-// import '../widgets/appointment_card.dart';
-import '../widgets/medication_card.dart';
+// import '../widgets/medication_card.dart';
 import '../widgets/bottom_nav_bar.dart';
 import '../widgets/popup_menu_buttom.dart';
+import '../widgets/medication_card_reduced.dart';
+import '../widgets/symptoms_card_reduced.dart';
 
 class YouWeekPage extends StatelessWidget {
   const YouWeekPage({super.key});
@@ -107,20 +108,9 @@ class YouWeekPage extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 20.0),
-                const MedicationCard(
-                    medicationName: 'Apirin',
-                    medicationDescription:
-                        'ASS, 500mg BAYER, überzogene Tabletten',
-                    daily: '0',
-                    time1: '0',
-                    time2: '0'),
+                const MedicationCardReduced(medicationName: 'Aspirin', medicationDescription: 'ASS, 500mg BAYER, überzogene Tabletten', daily: '-', time1: '6:00', time2: '22:00'),
                 const SizedBox(height: 20.0),
-                const MedicationCard(
-                    medicationName: 'Vitamins',
-                    medicationDescription: 'Mulitvitamin from Xworks, Capsule',
-                    daily: '0',
-                    time1: '0',
-                    time2: '0'),
+                const MedicationCardReduced(medicationName: 'Vitamins', medicationDescription: 'Mulitvitamin from Xworks, Capsule', daily: '-', time1: '8:00', time2: '12:00'),
                 const SizedBox(height: 40.0),
                 const Text(
                   '   Your Symptoms',
@@ -134,23 +124,12 @@ class YouWeekPage extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 20.0),
-                const SymptomsCard(
-                    symptomName: 'Headacache',
-                    symptomDescription: 'null',
-                    symptomDate: '20.04.2023',
-                    symptomTime: '16:30 - 18:30'),
+                const SymptomsCardReduced(symptomName: 'Headache', symptomDescription: 'aaaaaa', symptomDate: '20.04.2023', symptomTime: '16:30 - 18:30'),
                 const SizedBox(height: 20.0),
-                const SymptomsCard(
-                    symptomName: 'Nausea',
-                    symptomDescription: 'null',
-                    symptomDate: '20.04.2023',
-                    symptomTime: '16:30 - 18:30'),
+                const SymptomsCardReduced(symptomName: 'Nausea', symptomDescription: 'aaaaaaa', symptomDate: '22.04.2023', symptomTime: '11:00-16:00'),
                 const SizedBox(height: 20.0),
-                const SymptomsCard(
-                    symptomName: 'Anxiety',
-                    symptomDescription: 'null',
-                    symptomDate: '20.04.2023',
-                    symptomTime: '16:30 - 18:30'),
+                const SymptomsCardReduced(symptomName: 'Anxiety', symptomDescription: 'aaaaaaa', symptomDate: '22.04.2023', symptomTime: '06:00-12:00'),
+                const SizedBox(height: 20.0),
               ],
             ),
             const Positioned(
