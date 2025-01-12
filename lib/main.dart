@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
-import 'screens/dashboard/dashboard_page.dart';
-import 'screens/medical_info/medical_info_page.dart';
-import 'screens/search/search_page.dart';
-import 'screens/symptoms/symptoms_page.dart';
-import 'screens/medications/medication_page.dart';
-import 'screens/appointment/appointment_page.dart';
-import 'screens/news/news_page.dart';
-import 'screens/rewards/rewards_page.dart';
-import 'screens/calendar/calendar_page.dart';
-import 'screens/upload/upload_page.dart';
-import 'screens/symptoms/symptoms_edit_page.dart';
-import 'screens/medications/medications_edit_page.dart';
-import 'screens/week/you_week_page.dart';
-import 'screens/timeline/timeline_screen.dart';
+import 'pages/dashboard/dashboard_page.dart';
+import 'pages/medical_info/medical_info_page.dart';
+import 'pages/search/search_page.dart';
+import 'pages/symptoms/symptoms_page.dart';
+import 'pages/medications/medication_page.dart';
+import 'pages/appointment/appointment_page.dart';
+import 'pages/news/news_page.dart';
+import 'pages/rewards/rewards_page.dart';
+import 'pages/calendar/calendar_page.dart';
+import 'pages/upload/upload_page.dart';
+import 'pages/symptoms/symptoms_edit_page.dart';
+import 'pages/medications/medications_edit_page.dart';
+import 'pages/week/you_week_page.dart';
+import 'pages/timeline/timeline_screen.dart';
 
 
 void main() {
