@@ -61,70 +61,112 @@ class MenuSheet extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 35.0),
-              const  Row(
-                children: [
-                  Icon(
-                    size: 25.0,
-                    Icons.home,
-                    color: UIColor.textMain,
-                  ),
-                  SizedBox(width: 22.0),
-                  Text(
-                    'Dashboard',
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontFamily: 'Poppins',
-                      fontWeight: FontWeight.w500,
-                      height: 1.50,
-                      letterSpacing: 0.15,
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, '/');
+                },
+                child: const  Row(
+                  children: [
+                    Icon(
+                      size: 25.0,
+                      Icons.home,
                       color: UIColor.textMain,
                     ),
-                  ),
-                ],
+                    SizedBox(width: 22.0),
+                    Text(
+                      'Dashboard',
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontFamily: 'Poppins',
+                        fontWeight: FontWeight.w500,
+                        height: 1.50,
+                        letterSpacing: 0.15,
+                        color: UIColor.textMain,
+                      ),
+                    ),
+                  ],
+                ),
               ),
               const SizedBox(height: 35.0),
-              const Row(
-                children: [
-                  Icon(
-                    size: 25.0,
-                    Icons.medical_information,
-                    color: UIColor.textMain,
-                  ),
-                  SizedBox(width: 22.0),
-                  Text(
-                    'Medical Information',
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontFamily: 'Poppins',
-                      fontWeight: FontWeight.w500,
-                      height: 1.50,
-                      letterSpacing: 0.15,
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, '/week');
+                },
+                child: const Row(
+                  children: [
+                    Icon(
+                      size: 25.0,
+                      Icons.widgets_rounded,
                       color: UIColor.textMain,
                     ),
-                  ),
-                ],
+                    SizedBox(width: 22.0),
+                    Text(
+                      'Your Week',
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontFamily: 'Poppins',
+                        fontWeight: FontWeight.w500,
+                        height: 1.50,
+                        letterSpacing: 0.15,
+                        color: UIColor.textMain,
+                      ),
+                    ),
+                  ],
+                ),
               ),
               const SizedBox(height: 35.0),
-              const Row(
-                children: [
-                  Icon(
-                    size: 25.0,
-                    Icons.settings,
-                    color: UIColor.textMain,
-                  ),
-                  SizedBox(width: 22.0),
-                  Text(
-                    'Account Settings',
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontFamily: 'Poppins',
-                      fontWeight: FontWeight.w500,
-                      height: 1.50,
-                      letterSpacing: 0.15,
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, '/medical_info');
+                },
+                child: const Row(
+                  children: [
+                    Icon(
+                      size: 25.0,
+                      Icons.medical_information,
                       color: UIColor.textMain,
                     ),
-                  ),
-                ],
+                    SizedBox(width: 22.0),
+                    Text(
+                      'Medical Information',
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontFamily: 'Poppins',
+                        fontWeight: FontWeight.w500,
+                        height: 1.50,
+                        letterSpacing: 0.15,
+                        color: UIColor.textMain,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(height: 35.0),
+              GestureDetector(
+                onTap: () {
+                  // Navigator.pushNamed(context, '/settings');
+                },
+                child: const Row(
+                  children: [
+                    Icon(
+                      size: 25.0,
+                      Icons.settings,
+                      color: UIColor.textMain,
+                    ),
+                    SizedBox(width: 22.0),
+                    Text(
+                      'Account Settings',
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontFamily: 'Poppins',
+                        fontWeight: FontWeight.w500,
+                        height: 1.50,
+                        letterSpacing: 0.15,
+                        color: UIColor.textMain,
+                      ),
+                    ),
+                  ],
+                ),
               ),
               const SizedBox(height: 60.0),
               const Text(
@@ -182,27 +224,32 @@ class MenuSheet extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(height: 240.0),
-              const Row(
-                children: [
-                  Icon(
-                    size: 25.0,
-                    Icons.upload,
-                    color: UIColor.textMain,
-                  ),
-                  SizedBox(width: 22.0),
-                  Text(
-                    'Export your Medical Data',
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontFamily: 'Poppins',
-                      fontWeight: FontWeight.w500,
-                      height: 1.50,
-                      letterSpacing: 0.15,
+              const SizedBox(height: 100),
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, '/upload');
+                },
+                child: const Row(
+                  children: [
+                    Icon(
+                      size: 25.0,
+                      Icons.upload,
                       color: UIColor.textMain,
                     ),
-                  ),
-                ],
+                    SizedBox(width: 22.0),
+                    Text(
+                      'Export your Medical Data',
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontFamily: 'Poppins',
+                        fontWeight: FontWeight.w500,
+                        height: 1.50,
+                        letterSpacing: 0.15,
+                        color: UIColor.textMain,
+                      ),
+                    ),
+                  ],
+                ),
               ),
               const SizedBox(height: 35.0),
               const Row(

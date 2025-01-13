@@ -106,6 +106,43 @@ class YouWeekPage extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 20.0),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                  for (var day in ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'So'])
+                    SizedBox(
+                    width: 40,
+                    height: 77,
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                      Container(
+                        width: 25,
+                        height: 25,
+                        clipBehavior: Clip.antiAlias,
+                        decoration: BoxDecoration(color: Colors.black.withOpacity(0)),
+                        child: Image.asset('assets/images/pen-square.png'),
+                      ),
+                      const SizedBox(height: 20),
+                      Text(
+                        day,
+                        style: const TextStyle(
+                        color: Color(0xFF003F5F),
+                        fontSize: 18,
+                        fontFamily: 'Poppins',
+                        fontWeight: FontWeight.w400,
+                        height: 1.78,
+                        letterSpacing: -0.90,
+                        ),
+                      ),
+                      ],
+                    ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 20.0),
                 const MedicationCardReduced(medicationName: 'Aspirin', medicationDescription: 'ASS, 500mg BAYER, überzogene Tabletten', daily: '-', time1: '6:00', time2: '22:00'),
                 const SizedBox(height: 20.0),
                 const MedicationCardReduced(medicationName: 'Vitamins', medicationDescription: 'Mulitvitamin from Xworks, Capsule', daily: '-', time1: '8:00', time2: '12:00'),
@@ -120,6 +157,43 @@ class YouWeekPage extends StatelessWidget {
                     letterSpacing: -1.20,
                     color: UIColor.textMain,
                   ),
+                ),
+                const SizedBox(height: 20.0),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                  for (var day in ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'So'])
+                    SizedBox(
+                    width: 40,
+                    height: 77,
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                      Container(
+                        width: 25,
+                        height: 25,
+                        clipBehavior: Clip.antiAlias,
+                        decoration: BoxDecoration(color: Colors.black.withOpacity(0)),
+                        child: Image.asset('assets/images/pills.png'),
+                      ),
+                      const SizedBox(height: 20),
+                      Text(
+                        day,
+                        style: const TextStyle(
+                        color: Color(0xFF003F5F),
+                        fontSize: 18,
+                        fontFamily: 'Poppins',
+                        fontWeight: FontWeight.w400,
+                        height: 1.78,
+                        letterSpacing: -0.90,
+                        ),
+                      ),
+                      ],
+                    ),
+                    ),
+                  ],
                 ),
                 const SizedBox(height: 20.0),
                 const SymptomsCardReduced(symptomName: 'Headache', symptomDescription: 'aaaaaa', symptomDate: '20.04.2023', symptomTime: '16:30 - 18:30'),
