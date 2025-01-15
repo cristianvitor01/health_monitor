@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'pages/dashboard/dashboard_page.dart';
 import 'pages/medical_info/medical_info_page.dart';
 import 'pages/search/search_page.dart';
@@ -13,11 +14,15 @@ import 'pages/symptoms/symptoms_edit_page.dart';
 import 'pages/medications/medications_edit_page.dart';
 import 'pages/week/you_week_page.dart';
 import 'pages/timeline/timeline_screen.dart';
+import 'pages/firestore_test/firestore_test_page.dart';
 
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MainApp());
 }
+
 
 class MainApp extends StatelessWidget {
   const MainApp({super.key});
@@ -29,7 +34,7 @@ class MainApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
-        '/': (context) => const DashboardPage(),
+        '/': (context) => const FirestoreTestPage(),
         '/medical_info': (context) => const MedicalInfoPage(),
         '/search': (context) => const SearchPage(),
         '/symptoms': (context) => const SymptomsPage(),
