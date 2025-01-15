@@ -122,6 +122,7 @@ class YouWeekPage extends StatelessWidget {
                         width: 25,
                         height: 25,
                         clipBehavior: Clip.antiAlias,
+                        // ignore: deprecated_member_use
                         decoration: BoxDecoration(color: Colors.black.withOpacity(0)),
                         child: Image.asset('assets/images/pen-square.png'),
                       ),
@@ -175,6 +176,7 @@ class YouWeekPage extends StatelessWidget {
                         width: 25,
                         height: 25,
                         clipBehavior: Clip.antiAlias,
+                        // ignore: deprecated_member_use
                         decoration: BoxDecoration(color: Colors.black.withOpacity(0)),
                         child: Image.asset('assets/images/pills.png'),
                       ),
