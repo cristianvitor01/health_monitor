@@ -22,6 +22,7 @@ class FirestoreTestPage extends StatelessWidget {
                   'timestamp': FieldValue.serverTimestamp(),
                   'message': 'Hello, Firestore!',
                 });
+                // ignore: use_build_context_synchronously
                 ScaffoldMessenger.of(context).showSnackBar(
                   const SnackBar(content: Text('Data written to Firestore')),
                 );
@@ -34,8 +35,10 @@ class FirestoreTestPage extends StatelessWidget {
                 var snapshot = await FirebaseFirestore.instance.collection('test').get();
                 var documents = snapshot.docs;
                 for (var doc in documents) {
+                  // ignore: avoid_print
                   print(doc.data());
                 }
+                // ignore: use_build_context_synchronously
                 ScaffoldMessenger.of(context).showSnackBar(
                   const SnackBar(content: Text('Data read from Firestore')),
                 );

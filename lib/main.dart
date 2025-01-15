@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'pages/dashboard/dashboard_page.dart';
+// import 'pages/dashboard/dashboard_page.dart';
 import 'pages/medical_info/medical_info_page.dart';
 import 'pages/search/search_page.dart';
 import 'pages/symptoms/symptoms_page.dart';
