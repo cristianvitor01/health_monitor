@@ -4,8 +4,8 @@ import '../../widgets/dashboard_head.dart';
 import '../../widgets/bottom_nav_bar.dart';
 import '../../widgets/medical_info_card.dart';
 
-class MedicalInfoPage extends StatelessWidget {
-  const MedicalInfoPage({super.key});
+class MedicalInfoEdit extends StatelessWidget {
+  const MedicalInfoEdit({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,9 +18,7 @@ class MedicalInfoPage extends StatelessWidget {
               // Para permitir rolagem
               padding: const EdgeInsets.all(16.0),
               children: [
-                const DashboardHeader(
-                  title: 'Medical Info',
-                ), // Cabeçalho no topo
+                const DashboardHeader(title: 'Medical Info Edit',), // Cabeçalho no topo
                 const SizedBox(height: 16.0), // Espaço entre widgets
                 MedicalInfoCard(
                   userName: 'John Smith',
@@ -52,11 +50,11 @@ class MedicalInfoPage extends StatelessWidget {
                           borderRadius: BorderRadius.circular(12),
                         ),
                         child: IconButton(
-                          icon: const Icon(Icons.mode_edit_outlined,
+                          icon: const Icon(Icons.check,
                               color: UIColor.iconsColor),
                           onPressed: () {
-                            // Navegar para a pag de edição
-                            Navigator.pushNamed(context, '/medical_info_edit');
+                            // Confirmação das alterações 
+                            Navigator.pushNamed(context, '/medical_info');
                           },
                         ),
                       ),

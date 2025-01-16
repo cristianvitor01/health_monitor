@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-// import 'pages/dashboard/dashboard_page.dart';
+import 'pages/dashboard/dashboard_page.dart';
 import 'pages/medical_info/medical_info_page.dart';
+import 'pages/medical_info_edit/medical_info_edit.dart';
 import 'pages/search/search_page.dart';
 import 'pages/symptoms/symptoms_page.dart';
 import 'pages/medications/medication_page.dart';
@@ -14,7 +15,7 @@ import 'pages/symptoms/symptoms_edit_page.dart';
 import 'pages/medications/medications_edit_page.dart';
 import 'pages/week/you_week_page.dart';
 import 'pages/timeline/timeline_screen.dart';
-import 'pages/firestore_test/firestore_test_page.dart';
+import 'pages/firestore_test/firestore_test_page.dart'; // '/test_firebase': (context) => const FireStoreTest(),
 
 
 void main() async {
@@ -34,7 +35,7 @@ class MainApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
-        '/': (context) => const FirestoreTestPage(),
+        '/': (context) => const DashboardPage(),
         '/medical_info': (context) => const MedicalInfoPage(),
         '/search': (context) => const SearchPage(),
         '/symptoms': (context) => const SymptomsPage(),
@@ -48,6 +49,7 @@ class MainApp extends StatelessWidget {
         '/edit-medications': (context) => const MedicationsEditPage(),
         '/week': (context) => const YouWeekPage(),
         '/timeline': (context) => const TimelineScreen(),
+        '/medical_info_edit': (context) => const MedicalInfoEdit(),
       },
     );
   }
