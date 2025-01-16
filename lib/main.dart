@@ -18,7 +18,7 @@ import 'pages/firestore_test/firestore_test_page.dart';
 
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
+  WidgetsFlutterBinding.ensureInitialized(); 
   await Firebase.initializeApp();
   runApp(const MainApp());
 }

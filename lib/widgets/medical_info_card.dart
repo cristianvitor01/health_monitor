@@ -9,12 +9,12 @@ class MedicalInfoCard extends StatelessWidget {
   final String weight;
   final String bloodGroup;
   // Dados de vacinação
-  final String covidVaccine;
-  final String tetanusVaccine;
-  final String typhusVaccine;
-  final String hepatitisVaccine;
+  final DateTime covidVaccine;
+  final DateTime tetanusVaccine;
+  final DateTime typhusVaccine;
+  final DateTime hepatitisVaccine;
   // Surgery
-  final String surgery;
+  final DateTime surgery;
   // Allergies
   final String allergies;
   // Emergency Contacts
@@ -161,7 +161,7 @@ class MedicalInfoCard extends StatelessWidget {
                         .bodySmall
                         ?.copyWith(color: UIColor.textMain)),
                 const SizedBox(width: 30.0),
-                Text(covidVaccine,
+                Text('${covidVaccine.toLocal()}'.split(' ')[0], // convertendo a data para string
                     style: Theme.of(context)
                         .textTheme
                         .bodySmall
@@ -177,7 +177,7 @@ class MedicalInfoCard extends StatelessWidget {
                         .bodySmall
                         ?.copyWith(color: UIColor.textMain)),
                 const SizedBox(width: 30.0),
-                Text(tetanusVaccine,
+                Text('${tetanusVaccine.toLocal()}'.split(' ')[0],
                     style: Theme.of(context)
                         .textTheme
                         .bodySmall
@@ -193,7 +193,7 @@ class MedicalInfoCard extends StatelessWidget {
                         .bodySmall
                         ?.copyWith(color: UIColor.textMain)),
                 const SizedBox(width: 30.0),
-                Text(typhusVaccine,
+                Text('${typhusVaccine.toLocal()}'.split(' ')[0],
                     style: Theme.of(context)
                         .textTheme
                         .bodySmall
@@ -209,7 +209,7 @@ class MedicalInfoCard extends StatelessWidget {
                         .bodySmall
                         ?.copyWith(color: UIColor.textMain)),
                 const SizedBox(width: 30.0),
-                Text(hepatitisVaccine,
+                Text('${hepatitisVaccine.toLocal()}'.split(' ')[0],
                     style: Theme.of(context)
                         .textTheme
                         .bodySmall
@@ -231,7 +231,7 @@ class MedicalInfoCard extends StatelessWidget {
                         .bodySmall
                         ?.copyWith(color: UIColor.textMain)),
                 const SizedBox(width: 30.0),
-                Text(surgery,
+                Text('${surgery.toLocal()}'.split(' ')[0],
                     style: Theme.of(context)
                         .textTheme
                         .bodySmall

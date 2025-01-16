@@ -18,9 +18,9 @@ class MedicalInfoPage extends StatelessWidget {
             ListView(
               // Para permitir rolagem
               padding: const EdgeInsets.all(16.0),
-              children: const [
-                DashboardHeader(title: 'Medical Info',), // Cabeçalho no topo
-                SizedBox(height: 16.0), // Espaço entre widgets
+              children: [
+                const DashboardHeader(title: 'Medical Info',), // Cabeçalho no topo
+                const SizedBox(height: 16.0), // Espaço entre widgets
                 MedicalInfoCard(
                   userName: 'John Smith',
                   gender: 'Male',
@@ -28,11 +28,11 @@ class MedicalInfoPage extends StatelessWidget {
                   height: '1.80m',
                   weight: '80kg',
                   bloodGroup: 'A+',
-                  covidVaccine: '01/01/2021',
-                  tetanusVaccine: '01/01/2021',
-                  typhusVaccine: '01/01/2021',
-                  hepatitisVaccine: '01/01/2021',
-                  surgery: '21.09.2012  ',
+                  covidVaccine: DateTime.parse('2021-01-01'),
+                  tetanusVaccine: DateTime.parse('2021-01-01'),
+                  typhusVaccine: DateTime.parse('2021-01-01'),
+                  hepatitisVaccine: DateTime.parse('2021-01-01'),
+                  surgery: DateTime.parse('2012-09-21'),
                   allergies: 'Peanuts',
                   emergencyContacName: 'Pamela Smith',
                   emergencyContacNumber: '+49 600 500',
