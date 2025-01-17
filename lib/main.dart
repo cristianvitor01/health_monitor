@@ -15,8 +15,7 @@ import 'pages/symptoms/symptoms_edit_page.dart';
 import 'pages/medications/medications_edit_page.dart';
 import 'pages/week/you_week_page.dart';
 import 'pages/timeline/timeline_screen.dart';
-import 'pages/firestore_test/firestore_test_page.dart'; // '/test_firebase': (context) => const FireStoreTest(),
-
+import 'pages/firestore_test/firestore_test_page.dart'; 
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized(); 
@@ -50,6 +49,8 @@ class MainApp extends StatelessWidget {
         '/week': (context) => const YouWeekPage(),
         '/timeline': (context) => const TimelineScreen(),
         '/medical_info_edit': (context) => const MedicalInfoEdit(),
+        '/test_firebase': (context) => const FirestoreTestPage(), 
+
       },
     );
   }

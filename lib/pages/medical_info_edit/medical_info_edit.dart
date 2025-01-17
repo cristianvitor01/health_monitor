@@ -4,6 +4,9 @@ import '../../widgets/dashboard_head.dart';
 import '../../widgets/bottom_nav_bar.dart';
 import '../../widgets/medical_info_card.dart';
 
+
+// TODO: Implement MedicalInfoEdit with filders to edit the medical information
+
 class MedicalInfoEdit extends StatelessWidget {
   const MedicalInfoEdit({super.key});
 
