@@ -27,6 +27,7 @@ class Medication {
     );
   }
 
+  // Method to convert the Medication object to Firestore data
   Map<String, dynamic> toFirestore() {
     return {
       'medicationName': medicationName,

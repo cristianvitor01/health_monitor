@@ -1,11 +1,13 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import '../models/medical_info.dart';
 
+// TODO: Refactor MedicationInfoDataService, insert try-catch block
+
 // Class to handle the data from Firestore
-class DataService {
+class MedicalInfoDataService {
   final FirebaseFirestore _db = FirebaseFirestore.instance;
 
- // Method to add the MedicalInfo object to Firestore
+  // Method to add the MedicalInfo object to Firestore
   Future<void> addMedicalInfo(MedicalInfo info) async {
     await _db.collection('medical_info').add(info.toFirestore());
   }

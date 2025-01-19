@@ -4,7 +4,7 @@ import '../../widgets/dashboard_head.dart';
 import '../../widgets/bottom_nav_bar.dart';
 import '../../widgets/medical_info_card.dart';
 import '../../models/medical_info.dart';
-import '../../services/data_service.dart';
+import '../../services/medical_info_data_service.dart';
 
 class MedicalInfoPage extends StatelessWidget {
   const MedicalInfoPage({super.key});
@@ -15,7 +15,7 @@ class MedicalInfoPage extends StatelessWidget {
       child: Scaffold(
         backgroundColor: UIColor.backgroundColor,
         body: FutureBuilder<List<MedicalInfo>>(
-          future: DataService().fetchMedicalInfo(),
+          future: MedicalInfoDataService().fetchMedicalInfo(),
           builder: (context, snapshot) {
             // Verifica se há dados
             if (snapshot.connectionState == ConnectionState.waiting) {
