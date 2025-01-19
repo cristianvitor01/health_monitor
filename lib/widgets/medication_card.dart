@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../utils/app_colors.dart';
 
 class MedicationCard extends StatelessWidget {
+  final String medicationImage;
   final String medicationName;
   final String medicationDescription;
   final String daily;
@@ -10,6 +11,7 @@ class MedicationCard extends StatelessWidget {
 
   const MedicationCard({
     super.key,
+    required this.medicationImage,
     required this.medicationName,
     required this.medicationDescription,
     required this.daily,
@@ -76,8 +78,7 @@ class MedicationCard extends StatelessWidget {
                 ),
                 // Imagem do medicamento
                 const SizedBox(width: 12.0),
-                Image.asset(
-                  'assets/images/aspirin.png',
+                Image.asset(medicationImage ,
                   width: 114,
                   height: 119,
                   fit: BoxFit.fill,

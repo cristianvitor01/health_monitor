@@ -22,6 +22,7 @@ class MedicationsEditPage extends StatelessWidget {
                 // Alterar para o card de Sintomas
                 MedicationCard(
                   // medication_card
+                  medicationImage: 'assets/images/aspirin.png',
                   medicationName: 'Medication Edit Page',
                   medicationDescription: 'ASS, 500mg BAYER, coated pills',
                   daily: '2x Daily',

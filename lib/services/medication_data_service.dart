@@ -7,6 +7,7 @@ import '../models/medication.dart';
 class MedicationDataService {
   final FirebaseFirestore _db = FirebaseFirestore.instance;
 
+  // Method to add the Medication object to Firestore
   Future<void> addMedication(Medication info) async {
     try {
       await _db.collection('medication').add(info.toFirestore());
@@ -17,7 +18,8 @@ class MedicationDataService {
     }
   }
 
-  Future<List<Medication>> fetchMedicalInfo() async {
+  // Method to fetch(buscar) the Medication object from Firestore
+  Future<List<Medication>> fetchMedication() async {
     var snapshot = await _db.collection('medication').get();
     return List.from(snapshot.docs.map((doc) => Medication.fromFirestore(doc)));
   }

@@ -95,6 +95,7 @@ class DashboardPage extends StatelessWidget {
                 ),
                 const SizedBox(height: 20.0),
                 const MedicationCard( // medication_card
+                  medicationImage: 'assets/images/aspirin.png',
                   medicationName: 'Aspirin',
                   medicationDescription: 'ASS, 500mg BAYER, coated pills',
                   daily: '2x Daily',
