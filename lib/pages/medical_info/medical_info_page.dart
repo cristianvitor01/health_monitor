@@ -86,7 +86,6 @@ class MedicalInfoPage extends StatelessWidget {
         ),
         bottomNavigationBar: BottomNavBar(),
       ),
-      //bottomNavigationBar: BottomNavBar(), // Barra de navegação fixa
     );
   }
 }
