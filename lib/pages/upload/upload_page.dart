@@ -1,10 +1,47 @@
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
+import 'dart:io';
 import 'package:health_monitor/utils/app_colors.dart';
 import '../../widgets/popup_menu_buttom.dart';
 import '../../widgets/bottom_nav_bar.dart';
 
-class UploadPage extends StatelessWidget {
+//TODO: implement image flow
+
+class UploadPage extends StatefulWidget {
   const UploadPage({super.key});
+
+  @override
+  _UploadPageState createState() => _UploadPageState();
+}
+
+class _UploadPageState extends State<UploadPage> {
+  File? _imageFile;
+
+  Future<void> _takePhoto() async {
+    try {
+      final pickedFile = await ImagePicker().pickImage(source: ImageSource.camera);
+      if (pickedFile != null) {
+        setState(() {
+          _imageFile = File(pickedFile.path);
+        });
+      }
+    } catch (e) {
+      print('Error picking image: $e');
+    }
+  }
+
+  Future<void> _pickImage() async {
+    try {
+      final pickedFile = await ImagePicker().pickImage(source: ImageSource.gallery);
+      if (pickedFile != null) {
+        setState(() {
+          _imageFile = File(pickedFile.path);
+        });
+      }
+    } catch (e) {
+      print('Error picking image: $e');
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +81,6 @@ class UploadPage extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 30.0),
-                // Camera
                 Container(
                   width: 214,
                   height: 214,
@@ -63,12 +99,18 @@ class UploadPage extends StatelessWidget {
                         color: UIColor.textMain,
                         size: 60.0,
                       ),
-                      onPressed: () {
-                        debugPrint('Camera icon presionado');
-                      },
+                      onPressed: _takePhoto,
                     ),
                   ),
                 ),
+                const SizedBox(height: 30.0),
+                if (_imageFile != null)
+                  Image.file(
+                    _imageFile!,
+                    width: 214,
+                    height: 214,
+                    fit: BoxFit.cover,
+                  ),
                 const SizedBox(height: 30.0),
                 const Row(
                   children: [
@@ -104,9 +146,7 @@ class UploadPage extends StatelessWidget {
                         color: UIColor.textMain,
                         size: 60.0,
                       ),
-                      onPressed: () {
-                        debugPrint('Upload icon pressionado');
-                      },
+                      onPressed: _pickImage,
                     ),
                   ),
                 ),
