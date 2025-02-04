@@ -1,5 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
+// TODO: Fix Medication Image
+
 class Medication {
   final String medicationImage;
   final String medicationName;
